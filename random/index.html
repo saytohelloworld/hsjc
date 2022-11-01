@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>幸运随机抽</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div>
+        <div class="header">
+            <h1>幸运随机抽</h1>
+            <p>version: v2.1</p>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h3 style="margin-bottom: 20px;"><sup>1 /</sup> 请选择班级</h3>
+                <div id="classList" class="classList RadioStyle">
+                    <p>
+                        <input type="radio" name="class" id="model1" value="class_21s01_jsj"/>
+                        <label for="model1">21s计算机创新班</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="class" id="model2" value="class_21s00_jsj"/>
+                        <label for="model2">21s计算机普通班</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="class" id="model3" value="class_22s01_jsj1"/>
+                        <label for="model3">22s计算机创新1班</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="class" id="model4" value="class_22s01_jsj2"/>
+                        <label for="model4">22s计算机创新2班</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="class" id="model5" value="class_22s00_jsj1"/>
+                        <label for="model5">22s计算机普通1班</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="class" id="model6" value="class_22s00_jsj2"/>
+                        <label for="model6">22s计算机普通2班</label>
+                    </p>
+                </div>
+    
+                <h3><sup>2 /</sup> 开始</h3>
+                <div class="start InputStyle">
+                    <input type="button" id="randomPeople" value="随机抽人">
+                    <input type="button" id="randomWord" value="随机专业词汇">
+                    <br/>
+                    <input type="button" id="randomGroup" value="随机配对两人小组">
+                    <br/>
+                    <input type="button" id="clearHistory" value="清除历史记录">
+                </div>
+            </div>
+            <div class="right">
+                <div id="history" class="history"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="static/script.js"></script>
+    <script>
+        console.groupCollapsed('更新日志');
+	console.info('[ V2.2.20221018 ]: 更换计算机专业词汇 API');
+        console.info('[ V2.1.20221015 ]: 更换为 SQLite3 数据库');
+        console.info('[ V2.0.20221014 ]: 整体功能和网站完工');
+        console.groupEnd();
+    </script>
+</body>
+</html>
