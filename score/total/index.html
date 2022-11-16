@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宿舍评分系统 - 统计</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <style>
+        p {margin-bottom: 0.4rem;}
+        .selectBox {
+            width: 100%!important;
+            flex-wrap: wrap;
+        }
+        .selectBox select {
+            width: max-content;
+        }
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+  	    }
+
+        #app {
+            display: flex;
+        }
+        #app > div {
+            width: 25%;
+        }
+
+        @media (max-width: 600px) {
+            #app {
+                display: initial;
+            }
+            #app > div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="margin: 5vh 0;">宿舍评分系统 - 统计</h2>
+
+        <div class="d-flex flex-row selectBox mb-5" id="select">
+            <div>
+                <p>楼栋</p>
+                <select class="form-select" id="dormType">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+            </div>
+            <div class="ms-2 me-2 mb-3">
+                <p>选择评分日期</p>
+                <select class="form-select" id="dateList"></select>
+            </div>
+            <div>
+                <p>宿舍排名</p>
+                <div class="input-group">
+                    <span class="input-group-text">前</span>
+                    <input type="number" class="form-control" id="num" value="5" style="width: 60px;">
+                    <span class="input-group-text">名</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="rank">
+            <table class="table">
+                <thead>
+                    <tr><th>排名</th><th>宿舍门牌号</th><th>宿舍得分</th></tr>
+                </thead>
+                <tbody id="rankApp"></tbody>
+              </table>
+        </div>
+        <div id="app"></div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/5.4.0/echarts.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
